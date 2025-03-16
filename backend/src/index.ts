@@ -7,6 +7,7 @@ import {v2 as cloudinary} from "cloudinary";
 import MyRestaurantRoute from "./routes/MyRestaurantRoute"
 import RestaurantRoute from "./routes/RestaurantRoute"
 import orderRoute from "./routes/OrderRoute"
+import ChatRoute from "./routes/ChatRoute";
 
 mongoose
     .connect(process.env.MONGODB_CONNECTION_STRING as string)
@@ -29,6 +30,7 @@ app.use(express.json())
 app.get("/health", async(req: Request, res: Response)=>{
     res.send({message: "health ok!"}) 
 })
+app.use("/api/chat", ChatRoute);
 app.use("/api/my/user", MyUserRoutes);
 app.use("/api/my/restaurant", MyRestaurantRoute);
 app.use("/api/restaurant", RestaurantRoute);

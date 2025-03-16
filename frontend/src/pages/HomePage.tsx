@@ -2,6 +2,7 @@ import landingImage from "../assets/landing.png"
 import appDownloadImage from "../assets/appDownload.png"
 import SearchBar, { SearchForm } from "@/components/SearchBar"
 import { useNavigate } from "react-router-dom";
+import ChatBot from '@/components/ChatBot';
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -35,6 +36,7 @@ return(
           <img src={appDownloadImage} />
         </div>
         </div>
+        <ChatBot />
     </div>
 )
 }
