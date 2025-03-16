@@ -68,6 +68,7 @@ This application allows users to order food, track their deliveries, and manage 
 - **Cloudinary Account** (for image storage)
 - **Auth0 Account** (for authentication)
 - **Stripe Account** (for payment processing)
+- **Gemini AI** (using @google/generative-ai for integrating chatbot functionality)
 
 ### Backend Setup:
 1. Clone the repository:
@@ -96,6 +97,9 @@ This application allows users to order food, track their deliveries, and manage 
    FRONTEND_URL=http://localhost:5173
    STRIPE_API_KEY=<your-stripe-api-key>
    STRIPE_WEBHOOK_SECRET=<your-stripe-webhook-secret>
+
+   # Gemini AI
+   GOOGLE_API_KEY=<your-google-api-key>  
    ```
 4. Start the backend server:
    ```sh
@@ -142,6 +146,7 @@ This application allows users to order food, track their deliveries, and manage 
 1. **Users** can register/login via Auth0, browse restaurants, filter by cuisine, and place orders.
 2. **Restaurant owners** can add/manage restaurant details, menus, and orders.
 3. **Real-time updates** ensure smooth restaurant management and order tracking.
+4. **Gemini AI Chatbot:** Users can interact with a chatbot for assistance (e.g., "What would you recommend?"). This is powered by the Gemini AI model integrated into the backend.
 
 ---
 
